@@ -80,3 +80,21 @@ hooks.Filters.ENV_PATCHES.add_item(
         "RUN pip install 'bcrypt==4.0.1'"
     )
 )
+
+# =============================================================================
+# THEME CONFIGURATION (Medical Tribune custom theme)
+# =============================================================================
+
+hooks.Filters.ENV_PATCHES.add_item(
+    (
+        "openedx-lms-common-settings",
+        'DEFAULT_SITE_THEME = "medical-tribune-indigo"'
+    )
+)
+
+hooks.Filters.ENV_PATCHES.add_item(
+    (
+        "openedx-cms-common-settings",
+        'DEFAULT_SITE_THEME = "medical-tribune-indigo"'
+    )
+)
